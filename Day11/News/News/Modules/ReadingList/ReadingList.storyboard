@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Reading List-->
+        <scene sceneID="UXo-Nd-CC2">
+            <objects>
+                <viewController storyboardIdentifier="readingList" id="8Xa-wu-7uf" customClass="ReadingListViewController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t7d-Bm-ZmF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Sz7-tj-Hgj">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VxJ-3g-tL8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Sz7-tj-Hgj" secondAttribute="bottom" id="SHu-Bd-GYE"/>
+                            <constraint firstItem="Sz7-tj-Hgj" firstAttribute="top" secondItem="t7d-Bm-ZmF" secondAttribute="top" id="gnZ-8O-mPT"/>
+                            <constraint firstItem="Sz7-tj-Hgj" firstAttribute="leading" secondItem="VxJ-3g-tL8" secondAttribute="leading" id="peU-dn-uEm"/>
+                            <constraint firstItem="Sz7-tj-Hgj" firstAttribute="trailing" secondItem="VxJ-3g-tL8" secondAttribute="trailing" id="wqq-T8-eZd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Reading List" id="orv-YV-S8x"/>
+                    <connections>
+                        <outlet property="tableView" destination="Sz7-tj-Hgj" id="m4f-gn-7Qa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Dd-zM-aZp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031.8840579710145" y="111.83035714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kSH-G1-oZG">
+            <objects>
+                <navigationController storyboardIdentifier="rootReadingList" automaticallyAdjustsScrollViewInsets="NO" id="Tej-hb-imR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="tab_summary" selectedImage="tab_summary_active" id="ndE-pd-RPS"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AUo-la-wXH">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8Xa-wu-7uf" kind="relationship" relationship="rootViewController" id="OpE-bx-F6n"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4t0-MJ-t7a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121.73913043478262" y="111.83035714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab_summary" width="22" height="22"/>
+        <image name="tab_summary_active" width="22" height="22"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
